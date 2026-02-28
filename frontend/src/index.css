@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Golden Yellow Brand Colors */
+    --gold-primary: 0.72 0.18 75;
+    --gold-light: 0.88 0.16 85;
+    --gold-dark: 0.58 0.16 68;
+    --gold-deep: 0.48 0.14 65;
+
+    /* Charcoal / Dark */
+    --charcoal: 0.18 0.01 260;
+    --charcoal-light: 0.25 0.01 260;
+    --charcoal-mid: 0.35 0.01 260;
+
+    /* Semantic tokens */
+    --background: 0.98 0.005 80;
+    --foreground: 0.15 0.01 260;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.01 260;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.01 260;
+    --primary: 0.72 0.18 75;
+    --primary-foreground: 0.12 0.01 260;
+    --secondary: 0.95 0.03 80;
+    --secondary-foreground: 0.18 0.01 260;
+    --muted: 0.94 0.01 80;
+    --muted-foreground: 0.50 0.01 260;
+    --accent: 0.88 0.16 85;
+    --accent-foreground: 0.12 0.01 260;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.02 80;
+    --input: 0.88 0.02 80;
+    --ring: 0.72 0.18 75;
+    --chart-1: 0.72 0.18 75;
+    --chart-2: 0.58 0.16 68;
+    --chart-3: 0.48 0.14 65;
+    --chart-4: 0.88 0.16 85;
+    --chart-5: 0.35 0.01 260;
+    --sidebar: 0.18 0.01 260;
+    --sidebar-foreground: 0.95 0.01 80;
+    --sidebar-primary: 0.72 0.18 75;
+    --sidebar-primary-foreground: 0.12 0.01 260;
+    --sidebar-accent: 0.25 0.01 260;
+    --sidebar-accent-foreground: 0.95 0.01 80;
+    --sidebar-border: 0.25 0.01 260;
+    --sidebar-ring: 0.72 0.18 75;
+  }
+
+  .dark {
+    --background: 0.15 0.01 260;
+    --foreground: 0.95 0.01 80;
+    --card: 0.20 0.01 260;
+    --card-foreground: 0.95 0.01 80;
+    --popover: 0.22 0.01 260;
+    --popover-foreground: 0.95 0.01 80;
+    --primary: 0.72 0.18 75;
+    --primary-foreground: 0.12 0.01 260;
+    --secondary: 0.25 0.01 260;
+    --secondary-foreground: 0.95 0.01 80;
+    --muted: 0.25 0.01 260;
+    --muted-foreground: 0.65 0.01 260;
+    --accent: 0.58 0.16 68;
+    --accent-foreground: 0.12 0.01 260;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.28 0.01 260;
+    --input: 0.28 0.01 260;
+    --ring: 0.72 0.18 75;
+    --sidebar: 0.18 0.01 260;
+    --sidebar-foreground: 0.95 0.01 80;
+    --sidebar-primary: 0.72 0.18 75;
+    --sidebar-primary-foreground: 0.12 0.01 260;
+    --sidebar-accent: 0.25 0.01 260;
+    --sidebar-accent-foreground: 0.95 0.01 80;
+    --sidebar-border: 0.25 0.01 260;
+    --sidebar-ring: 0.72 0.18 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .text-gold {
+    color: oklch(var(--gold-primary));
+  }
+  .bg-gold {
+    background-color: oklch(var(--gold-primary));
+  }
+  .bg-gold-light {
+    background-color: oklch(var(--gold-light));
+  }
+  .bg-charcoal {
+    background-color: oklch(var(--charcoal));
+  }
+  .border-gold {
+    border-color: oklch(var(--gold-primary));
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, oklch(0.72 0.18 75), oklch(0.88 0.16 85), oklch(0.58 0.16 68));
+  }
+  .gold-text-gradient {
+    background: linear-gradient(135deg, oklch(0.72 0.18 75), oklch(0.58 0.16 68));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.94 0.01 80);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.72 0.18 75);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.58 0.16 68);
+}

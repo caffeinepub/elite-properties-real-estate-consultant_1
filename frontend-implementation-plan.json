@@ -1,0 +1,24 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Change 'Pune's Most Trusted' tagline to black with professional font",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Update Hero section tagline to deep black color and professional serif font",
+      "acceptanceCriteria": [
+        "The tagline 'Pune's Most Trusted Real Estate Business' in the Hero section is rendered in deep black (#111111 or near-black).",
+        "The tagline uses a professional serif font (e.g., Playfair Display) consistent with the site's luxury typography pairing.",
+        "The tagline is clearly legible against the hero background with no visibility issues.",
+        "No other text elements or sections are unintentionally altered."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Update the tagline 'Pune's Most Trusted Real Estate Business' to use deep black color (#111111) and apply the Playfair Display serif font (already configured in tailwind.config.js as font-playfair). Locate the tagline text element in the Hero component and modify its className to include text-[#111111] and font-playfair while preserving all other existing styling and layout properties. Ensure the text remains clearly legible against the hero background image."
+        }
+      ]
+    }
+  ]
+}

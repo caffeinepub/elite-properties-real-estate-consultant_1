@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-in-the-hero-section-change-the-tagline-text-pune-s-most-trusted-real-estate-business-to-deep-black-111111-or-similar-near-black-replace-its-current-font-with-a-professional-serif-font-e-g-playfair-display-already-available-in-the-project-to-maintain-a-luxury-real-estate-aesthetic-ensure-the-text-remains-clearly-legible-against-the-hero-background-at-all-times",
+      "featureTitle": "In the Hero section, change the tagline text 'Pune's Most Trusted Real Estate Business' to deep black (#111111 or similar near-black). Replace its current font with a professional serif font (e.g., Playfair Display, already available in the project) to maintain a luxury real estate aesthetic. Ensure the text remains clearly legible against the hero background at all times.",
+      "files": [
+        "frontend/src/components/Hero.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

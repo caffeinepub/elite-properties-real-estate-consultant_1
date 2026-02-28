@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Professional yellow-themed real estate consultant website for Elite Properties, Pune. Features business info, WhatsApp enquiry, services section, and 'most trusted real estate in Pune' branding.",
+  "architectural_notes": [
+    "Yellow professional color theme throughout the website",
+    "WhatsApp enquiry integration using number 095279 42323",
+    "Company name in navbar/hero must be black (not yellow) for visibility, displayed in large bold text",
+    "Tagline 'Pune's Most Trusted...' must be black colored with a professional font (not yellow)"
+  ],
+  "known_issues": [
+    "Company name was not visible due to yellow-on-yellow color conflict in navbar/hero"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-professional-yellow-themed-single-page-website-for-elite-properties-real-estate-consultant-the-visual-theme-must-use-a-rich-golden-yellow-f5a000-ffd700-range-as-the-primary-brand-color-with-deep-charcoal-or-near-black-as-the-contrast-color-premium-serif-sans-serif-typography-pairing-and-a-luxury-real-estate-aesthetic-apply-the-theme-consistently-across-all-sections-with-polished-card-layouts-bold-section-headers-and-subtle-shadow-depth-effects",
+      "title": "Create a professional yellow-themed single-page website for 'Elite Properties Real Estate Consultant'. The visual theme must use a rich golden-yellow (#F5A000 / #FFD700 range) as the primary brand color with deep charcoal or near-black as the contrast color, premium serif/sans-serif typography pairing, and a luxury real estate aesthetic. Apply the theme consistently across all sections with polished card layouts, bold section headers, and subtle shadow/depth effects.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-full-width-hero-section-at-the-top-of-the-page-featuring-the-business-name-elite-properties-real-estate-consultant-in-english-prominently-the-hindi-name-as-a-subtitle-and-the-tagline-pune-s-most-trusted-real-estate-business-include-the-hero-background-image-hero-bg-dim-1920x1080-jpg-as-the-section-background-with-a-semi-transparent-yellow-overlay-add-a-prominent-whatsapp-enquiry-cta-button",
+      "title": "Build a full-width hero section at the top of the page featuring: the business name 'Elite Properties Real Estate Consultant' in English prominently, the Hindi name 'एलिट प्रोपर्टीज रियल एस्टेट कंसलटेंट' as a subtitle, and the tagline 'Pune's Most Trusted Real Estate Business'. Include the hero background image (hero-bg.dim_1920x1080.jpg) as the section background with a semi-transparent yellow overlay. Add a prominent 'WhatsApp Enquiry' CTA button.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-services-section-displaying-all-services-extracted-from-the-uploaded-images-as-styled-cards-or-a-grid-services-to-include-property-buying-and-sales-property-management-property-rentals-property-development-property-investing-property-sales-management-vacation-properties-civil-works-finance-consultant-online-agreement-property-valuation-reports-appraisals-building-lot-sales-commercial-property-buying-and-sales-farm-sales-first-time-home-buyer-services-furnished-property-rentals-and-sales-land-leasing-and-sales-loans-luxury-properties-new-construction-sales-and-leasing-each-service-card-should-have-a-relevant-icon-and-yellow-accent-styling",
+      "title": "Create a Services section displaying all services extracted from the uploaded images as styled cards or a grid. Services to include: Property Buying and Sales, Property Management, Property Rentals, Property Development, Property Investing, Property Sales Management, Vacation Properties, Civil Works Finance Consultant, Online Agreement, Property Valuation Reports, Appraisals, Building Lot Sales, Commercial Property Buying and Sales, Farm Sales, First-Time Home Buyer Services, Furnished Property Rentals and Sales, Land Leasing and Sales, Loans, Luxury Properties, New Construction Sales and Leasing. Each service card should have a relevant icon and yellow accent styling.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-business-info-contact-section-displaying-address-zala-society-building-no-1-office-no-6-first-floor-karve-rd-near-karishma-chowk-kothrud-pune-maharashtra-411038-business-hours-mon-sun-9-30-am-8-30-pm-phone-number-095279-42323-and-a-whatsapp-enquiry-button-that-opens-whatsapp-chat-to-91-95279-42323-style-this-section-with-yellow-accents-and-professional-layout",
+      "title": "Create a Business Info / Contact section displaying: address 'Zala Society Building No 1, Office No 6, First Floor, Karve Rd, Near Karishma Chowk, Kothrud, Pune, Maharashtra 411038', business hours 'Mon–Sun: 9:30 AM – 8:30 PM', phone number '095279 42323', and a WhatsApp Enquiry button that opens WhatsApp chat to +91 95279 42323. Style this section with yellow accents and professional layout.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-sticky-navigation-bar-at-the-top-with-the-elite-properties-logo-brand-name-and-navigation-links-home-services-about-contact-the-navbar-should-use-yellow-as-the-background-or-accent-color-and-remain-fixed-on-scroll",
+      "title": "Add a sticky navigation bar at the top with the Elite Properties logo/brand name and navigation links: Home, Services, About, Contact. The navbar should use yellow as the background or accent color and remain fixed on scroll.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-about-why-choose-us-section-highlighting-trust-and-expertise-include-stats-or-highlights-such-as-most-trusted-in-pune-expert-consultants-end-to-end-property-services-use-yellow-icon-badges-and-professional-copy",
+      "title": "Add an 'About / Why Choose Us' section highlighting trust and expertise. Include stats or highlights such as 'Most Trusted in Pune', 'Expert Consultants', 'End-to-End Property Services'. Use yellow icon badges and professional copy.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-footer-with-the-business-name-english-hindi-address-phone-whatsapp-link-business-hours-and-a-copyright-line-style-with-dark-background-and-yellow-accent-text",
+      "title": "Add a footer with the business name (English + Hindi), address, phone, WhatsApp link, business hours, and a copyright line. Style with dark background and yellow accent text.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-navbar-logo-with-a-new-distinctive-logo-design-for-elite-properties-real-estate-consultant-the-logo-should-use-an-innovative-visual-mark-e-g-a-stylized-building-key-or-crown-icon-combined-with-ep-monogram-that-stands-out-against-the-yellow-gold-navbar-background-the-logo-should-be-rendered-as-an-svg-or-inline-component-not-dependent-on-any-external-image-file",
+      "title": "Replace the current navbar logo with a new, distinctive logo design for 'Elite Properties Real Estate Consultant'. The logo should use an innovative visual mark (e.g., a stylized building, key, or crown icon combined with 'EP' monogram) that stands out against the yellow/gold navbar background. The logo should be rendered as an SVG or inline component — not dependent on any external image file.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-company-name-text-elite-properties-real-estate-consultant-in-the-navbar-to-deep-black-111111-or-similar-near-black-increase-its-font-size-to-make-it-prominently-visible-and-apply-bold-weight-ensure-this-resolves-the-yellow-on-yellow-invisibility-issue-so-the-name-is-clearly-legible-at-all-times-including-when-scrolled",
+      "title": "Change the company name text 'Elite Properties Real Estate Consultant' in the navbar to deep black (#111111 or similar near-black), increase its font size to make it prominently visible, and apply bold weight. Ensure this resolves the yellow-on-yellow invisibility issue so the name is clearly legible at all times including when scrolled.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-hero-section-change-the-tagline-text-pune-s-most-trusted-real-estate-business-to-deep-black-111111-or-similar-near-black-replace-its-current-font-with-a-professional-serif-font-e-g-playfair-display-already-available-in-the-project-to-maintain-a-luxury-real-estate-aesthetic-ensure-the-text-remains-clearly-legible-against-the-hero-background-at-all-times",
+      "title": "In the Hero section, change the tagline text 'Pune's Most Trusted Real Estate Business' to deep black (#111111 or similar near-black). Replace its current font with a professional serif font (e.g., Playfair Display, already available in the project) to maintain a luxury real estate aesthetic. Ensure the text remains clearly legible against the hero background at all times.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with 'Most Trusted Real Estate Business in Pune' tagline and yellow professional theme",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Business info section: address (Zala Society, Karve Rd, Kothrud, Pune), timing 9:30-8:30, WhatsApp enquiry button (095279 42323)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Services section showcasing real estate consultant services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Bilingual branding: English 'Elite Properties Real Estate Consultant' and Hindi 'एलिट प्रोपर्टीज रियल एस्टेट कंसलटेंट'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Update company logo to a different/new design and change company name text color to black (was yellow/invisible) and make it bigger",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Change 'Pune's Most Trusted Real Estate Business' tagline text to black color and update to a professional font",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Elite Properties Real Estate Consultant",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
