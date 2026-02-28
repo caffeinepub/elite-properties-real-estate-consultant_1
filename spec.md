@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Update the Hero section tagline text color and font to give it a more professional, luxury look.
+**Goal:** Display the Elite Properties logo image in the Navbar, immediately before the company name text, with the same gold-to-silver gradient ring border style used in the FeaturedCommercialCard section.
 
 **Planned changes:**
-- Change the "Pune's Most Trusted Real Estate Business" tagline color to deep black (#111111 or near-black)
-- Apply a professional serif font (e.g., Playfair Display) to the tagline text
+- In `Navbar.tsx`, add an `<img>` tag referencing `frontend/public/assets/generated/elite-logo.dim_300x300.png` immediately to the left of the company name text "Elite Properties Real Estate Consultant"
+- Size the logo to approximately 40–48px and vertically center it with the company name
+- Apply the same gold-to-silver gradient ring/border styling (`#C9A84C` / `#A8A8A8`) currently used on the logo in the FeaturedCommercialCard section
 
-**User-visible outcome:** The Hero section tagline appears in bold deep black with an elegant serif font, maintaining legibility against the hero background.
+**User-visible outcome:** The Elite Properties logo appears in the navbar to the left of the company name on all pages, styled with a matching gradient ring border, without breaking the layout on desktop or mobile.

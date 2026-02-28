@@ -7,10 +7,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-charcoal-900 border-t border-charcoal-700 relative overflow-hidden">
-      {/* Gold top accent */}
+      {/* Champagne gold top accent */}
       <div
         className="absolute top-0 left-0 right-0 h-1"
-        style={{ background: 'linear-gradient(90deg, oklch(0.72 0.18 75), oklch(0.88 0.16 85), oklch(0.58 0.16 68))' }}
+        style={{ background: 'linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
       />
 
       {/* Main Footer Content */}
@@ -20,8 +20,20 @@ export default function Footer() {
           {/* Brand Column */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-sm gold-gradient flex items-center justify-center shadow-gold flex-shrink-0">
-                <span className="font-display font-bold text-charcoal-900 text-xl">EP</span>
+              {/* Logo with gradient border ring */}
+              <div
+                className="p-[2px] rounded-xl flex-shrink-0"
+                style={{
+                  background: 'linear-gradient(135deg, oklch(0.80 0.13 78), oklch(0.68 0.14 72), oklch(0.54 0.13 65))',
+                }}
+              >
+                <div className="bg-charcoal-800 rounded-xl overflow-hidden w-12 h-12 flex items-center justify-center">
+                  <img
+                    src="/assets/generated/elite-logo.dim_400x400.png"
+                    alt="Elite Properties Logo"
+                    className="w-full h-full object-contain p-1"
+                  />
+                </div>
               </div>
               <div>
                 <div className="font-display font-bold text-gold-400 text-lg leading-tight">
@@ -57,8 +69,15 @@ export default function Footer() {
                   Kothrud, Pune, Maharashtra 411038
                 </span>
               </li>
-              <li className="flex gap-3 items-center">
-                <Phone size={16} className="text-gold-500 flex-shrink-0" />
+              <li className="flex gap-3">
+                <Clock size={16} className="text-gold-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-body text-charcoal-300 text-sm">Mon – Sun: </span>
+                  <span className="font-body text-gold-400 text-sm font-semibold">9:30 AM – 8:30 PM</span>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <Phone size={16} className="text-gold-500 flex-shrink-0 mt-0.5" />
                 <a
                   href="tel:+919527942323"
                   className="font-body text-charcoal-300 hover:text-gold-400 text-sm transition-colors"
@@ -66,50 +85,26 @@ export default function Footer() {
                   095279 42323
                 </a>
               </li>
-              <li className="flex gap-3 items-center">
-                <Clock size={16} className="text-gold-500 flex-shrink-0" />
-                <span className="font-body text-charcoal-300 text-sm">
-                  Mon–Sun: <span className="text-gold-400 font-medium">9:30 AM – 8:30 PM</span>
-                </span>
-              </li>
-              <li className="flex gap-3 items-center">
-                <SiWhatsapp size={16} className="text-gold-500 flex-shrink-0" />
-                <a
-                  href="https://wa.me/919527942323"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body text-charcoal-300 hover:text-gold-400 text-sm transition-colors"
-                >
-                  WhatsApp Enquiry
-                </a>
-              </li>
             </ul>
           </div>
 
-          {/* Quick Links + CTA */}
+          {/* Quick Links + WhatsApp CTA */}
           <div>
             <h4 className="font-display font-semibold text-white text-base mb-5 pb-2 border-b border-charcoal-700">
               Quick Links
             </h4>
             <ul className="space-y-2 mb-6">
-              {[
-                { label: 'Home', href: '#home' },
-                { label: 'About Us', href: '#about' },
-                { label: 'Our Services', href: '#services' },
-                { label: 'Contact Us', href: '#contact' },
-              ].map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+              {['Home', 'About', 'Services', 'Contact'].map((link) => (
+                <li key={link}>
+                  <button
+                    onClick={() => {
+                      const el = document.querySelector(`#${link.toLowerCase()}`);
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="font-body text-charcoal-300 hover:text-gold-400 text-sm transition-colors flex items-center gap-2 group"
+                    className="font-body text-charcoal-300 hover:text-gold-400 text-sm transition-colors"
                   >
-                    <span className="w-1 h-1 rounded-full bg-gold-600 group-hover:bg-gold-400 transition-colors" />
-                    {link.label}
-                  </a>
+                    {link}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -118,34 +113,36 @@ export default function Footer() {
               href="https://wa.me/919527942323"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 gold-gradient text-charcoal-900 font-body font-bold text-sm px-5 py-3 rounded-sm shadow-gold hover:opacity-90 transition-all duration-200 w-full"
+              className="flex items-center justify-center gap-2 gold-gradient text-charcoal-900 font-body font-bold text-sm px-5 py-3 rounded-sm shadow-gold hover:opacity-90 transition-all duration-200 hover:scale-105"
             >
-              <MessageCircle size={16} />
+              <SiWhatsapp size={16} />
               WhatsApp Enquiry
             </a>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-charcoal-700 pt-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="font-body text-charcoal-500 text-xs text-center sm:text-left">
-              © {year} Elite Properties Real Estate Consultant. All rights reserved.
-            </p>
-            <p className="font-body text-charcoal-500 text-xs flex items-center gap-1">
-              Built with{' '}
-              <Heart size={12} className="text-gold-500 fill-gold-500 mx-0.5" />
-              {' '}using{' '}
-              <a
-                href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appId}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gold-500 hover:text-gold-400 transition-colors"
-              >
-                caffeine.ai
-              </a>
-            </p>
-          </div>
+        <div
+          className="h-px mb-6"
+          style={{ background: 'linear-gradient(90deg, transparent, oklch(0.68 0.14 72 / 0.4), transparent)' }}
+        />
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
+          <p className="font-body text-charcoal-500 text-xs">
+            © {year} Elite Properties Real Estate Consultant. All rights reserved.
+          </p>
+          <p className="font-body text-charcoal-500 text-xs flex items-center gap-1">
+            Built with <Heart size={12} className="text-gold-500 fill-gold-500" /> using{' '}
+            <a
+              href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-400 hover:text-gold-300 transition-colors"
+            >
+              caffeine.ai
+            </a>
+          </p>
         </div>
       </div>
     </footer>

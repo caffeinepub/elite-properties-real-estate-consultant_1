@@ -1,22 +1,23 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Change 'Pune's Most Trusted' tagline to black with professional font",
+  "title": "Display Elite Properties logo image before company name in Navbar",
   "requirements": [
     {
-      "id": "REQ-10",
-      "summary": "Update Hero section tagline to deep black color and professional serif font",
+      "id": "REQ-19",
+      "summary": "Add Elite Properties logo with gold-to-silver gradient ring border in Navbar before company name text",
       "acceptanceCriteria": [
-        "The tagline 'Pune's Most Trusted Real Estate Business' in the Hero section is rendered in deep black (#111111 or near-black).",
-        "The tagline uses a professional serif font (e.g., Playfair Display) consistent with the site's luxury typography pairing.",
-        "The tagline is clearly legible against the hero background with no visibility issues.",
-        "No other text elements or sections are unintentionally altered."
+        "The Elite Properties logo image appears in the navbar immediately to the left of the company name text.",
+        "The logo uses the same image source (elite-logo.dim_300x300.png) and the same gold-to-silver gradient ring/border style as the one displayed on the FeaturedCommercialCard.",
+        "The logo is sized appropriately for the navbar (approximately 40–48px) and is vertically centered with the company name.",
+        "The company name text 'Elite Properties Real Estate Consultant' remains visible, deep black (#111111), bold, and to the right of the logo.",
+        "The navbar layout does not break on desktop or mobile viewports."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Hero.tsx",
+          "path": "frontend/src/components/Navbar.tsx",
           "operation": "modify",
-          "description": "Update the tagline 'Pune's Most Trusted Real Estate Business' to use deep black color (#111111) and apply the Playfair Display serif font (already configured in tailwind.config.js as font-playfair). Locate the tagline text element in the Hero component and modify its className to include text-[#111111] and font-playfair while preserving all other existing styling and layout properties. Ensure the text remains clearly legible against the hero background image."
+          "description": "Add an <img> element referencing frontend/public/assets/generated/elite-logo.dim_300x300.png immediately before the company name text 'Elite Properties Real Estate Consultant'. Apply the same gold-to-silver gradient ring border styling (using box-shadow or CSS gradient ring in #C9A84C / #A8A8A8 tones) that is currently used on the logo in the FeaturedCommercialCard component. Size the logo to approximately 40x40 or 48x48px with appropriate CSS classes. Ensure the logo and company name are wrapped in a flex container with vertical alignment (items-center) so they sit side-by-side. Verify the layout remains responsive on both desktop and mobile viewports, and that the mobile hamburger menu continues to function correctly."
         }
       ]
     }

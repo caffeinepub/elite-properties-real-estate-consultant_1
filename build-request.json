@@ -1,37 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Change 'Pune's Most Trusted' tagline to black with professional font",
+  "title": "Display Elite Properties logo image before company name in Navbar",
   "projectName": "Elite Properties",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-10",
-      "text": "In the Hero section, change the tagline text 'Pune's Most Trusted Real Estate Business' to deep black (#111111 or similar near-black). Replace its current font with a professional serif font (e.g., Playfair Display, already available in the project) to maintain a luxury real estate aesthetic. Ensure the text remains clearly legible against the hero background at all times.",
+      "id": "REQ-19",
+      "text": "In Navbar.tsx, add the Elite Properties logo image (referenced from frontend/public/assets/generated/elite-logo.dim_300x300.png, rendered as an <img> tag) immediately before the company name text 'Elite Properties Real Estate Consultant'. Apply the same gold-to-silver gradient ring border styling (box-shadow or CSS gradient ring in #C9A84C / #A8A8A8 tones) that is currently used on the logo in the standalone FeaturedCommercialCard section. Size the logo appropriately for the navbar (e.g., 40x40 or 48x48px) and ensure it aligns vertically with the company name text.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Make that punes most trusted in black and change font keep professional one"
+          "Take the logo same as of Commercial Rent and sale part before the company Name pls"
         ]
       },
       "acceptanceCriteria": [
-        "The tagline 'Pune's Most Trusted Real Estate Business' in the Hero section is rendered in deep black (#111111 or near-black).",
-        "The tagline uses a professional serif font (e.g., Playfair Display) consistent with the site's luxury typography pairing.",
-        "The tagline is clearly legible against the hero background with no visibility issues.",
-        "No other text elements or sections are unintentionally altered."
+        "The Elite Properties logo image appears in the navbar immediately to the left of the company name text.",
+        "The logo uses the same image source (elite-logo.dim_300x300.png) and the same gold-to-silver gradient ring/border style as the one displayed on the FeaturedCommercialCard.",
+        "The logo is sized appropriately for the navbar (approximately 40–48px) and is vertically centered with the company name.",
+        "The company name text 'Elite Properties Real Estate Consultant' remains visible, deep black (#111111), bold, and to the right of the logo.",
+        "The navbar layout does not break on desktop or mobile viewports."
       ]
     }
   ],
   "constraints": [
-    "Do not change any other text colors or fonts outside the Hero tagline.",
-    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui."
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui.",
+    "Use the existing asset at frontend/public/assets/generated/elite-logo.dim_300x300.png — do not create a new image.",
+    "The logo border/ring style in the navbar must visually match the one used on the FeaturedCommercialCard."
   ],
   "nonGoals": [
-    "Changing the navbar company name styling (already handled in a prior feature).",
-    "Modifying the About, Services, Contact, or Footer sections.",
-    "Adding new sections or features."
+    "Changing the company name text color, font, or size.",
+    "Modifying the FeaturedCommercialCard component or its logo.",
+    "Adding any new sections or modifying other parts of the site."
   ],
   "imageRequirements": {
     "required": [],

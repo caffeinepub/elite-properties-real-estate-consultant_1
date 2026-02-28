@@ -1,17 +1,18 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 13,
   "summary": "Professional yellow-themed real estate consultant website for Elite Properties, Pune. Features business info, WhatsApp enquiry, services section, and 'most trusted real estate in Pune' branding.",
   "architectural_notes": [
     "Yellow professional color theme throughout the website",
     "WhatsApp enquiry integration using number 095279 42323",
     "Company name in navbar/hero must be black (not yellow) for visibility, displayed in large bold text",
-    "Tagline 'Pune's Most Trusted...' must be black colored with a professional font (not yellow)"
+    "Tagline 'Pune's Most Trusted...' must be black colored with a professional font (not yellow)",
+    "Logo should use uploaded image asset with innovative border styling"
   ],
   "known_issues": [
     "Company name was not visible due to yellow-on-yellow color conflict in navbar/hero"
   ],
-  "isFixRequest": true,
+  "isFixRequest": false,
   "existing_features": [
     {
       "id": "feature-create-a-professional-yellow-themed-single-page-website-for-elite-properties-real-estate-consultant-the-visual-theme-must-use-a-rich-golden-yellow-f5a000-ffd700-range-as-the-primary-brand-color-with-deep-charcoal-or-near-black-as-the-contrast-color-premium-serif-sans-serif-typography-pairing-and-a-luxury-real-estate-aesthetic-apply-the-theme-consistently-across-all-sections-with-polished-card-layouts-bold-section-headers-and-subtle-shadow-depth-effects",
@@ -92,6 +93,78 @@
         "REQ-10"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-svg-logo-in-navbar-tsx-with-the-uploaded-elite-properties-logo-image-elite-logo-dim-300x300-png-render-it-as-an-img-tag-referencing-the-generated-asset-at-frontend-public-assets-generated-elite-logo-dim-300x300-png-wrap-the-logo-image-in-an-innovative-circular-or-rounded-square-border-using-a-gold-to-silver-gradient-ring-e-g-a-css-border-with-gradient-or-a-box-shadow-ring-in-gold-c9a84c-silver-a8a8a8-tones-to-give-it-a-premium-stand-out-appearance-against-the-navbar-background",
+      "title": "Replace the current SVG logo in Navbar.tsx with the uploaded Elite Properties logo image (elite-logo.dim_300x300.png). Render it as an <img> tag referencing the generated asset at frontend/public/assets/generated/elite-logo.dim_300x300.png. Wrap the logo image in an innovative circular or rounded-square border using a gold-to-silver gradient ring (e.g., a CSS border with gradient or a box-shadow ring in gold #C9A84C / silver #A8A8A8 tones) to give it a premium, stand-out appearance against the navbar background.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-refine-the-overall-site-theme-to-a-more-professional-premium-color-palette-shift-the-primary-accent-from-bright-yellow-ffd700-to-a-rich-champagne-gold-c9a84c-b8952a-range-paired-with-deep-charcoal-1a1a1a-and-platinum-silver-e8e8e8-as-supporting-tones-update-tailwind-config-gold-color-tokens-and-css-custom-properties-accordingly-apply-this-refined-palette-consistently-across-the-navbar-hero-overlay-section-headers-card-borders-button-backgrounds-icon-badges-and-footer-accents-the-result-should-feel-sophisticated-and-upscale-rather-than-high-visibility-yellow",
+      "title": "Refine the overall site theme to a more professional, premium color palette. Shift the primary accent from bright yellow (#FFD700) to a rich champagne gold (#C9A84C / #B8952A range) paired with deep charcoal (#1A1A1A) and platinum silver (#E8E8E8) as supporting tones. Update Tailwind config gold color tokens and CSS custom properties accordingly. Apply this refined palette consistently across the navbar, hero overlay, section headers, card borders, button backgrounds, icon badges, and footer accents. The result should feel sophisticated and upscale rather than high-visibility yellow.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-navbar-increase-the-font-size-of-the-elite-properties-real-estate-consultant-company-name-text-to-make-it-significantly-more-prominent-target-approximately-text-2xl-or-text-3xl-on-desktop-apply-font-extrabold-weight-and-ensure-the-color-remains-deep-black-111111-in-the-hero-section-similarly-increase-the-size-of-the-primary-elite-properties-real-estate-consultant-heading-to-a-larger-scale-e-g-text-5xl-or-text-6xl-on-desktop-with-bold-extrabold-weight-so-it-commands-attention",
+      "title": "In the Navbar, increase the font size of the 'Elite Properties Real Estate Consultant' company name text to make it significantly more prominent — target approximately text-2xl or text-3xl on desktop. Apply font-extrabold weight and ensure the color remains deep black (#111111). In the Hero section, similarly increase the size of the primary 'Elite Properties Real Estate Consultant' heading to a larger scale (e.g., text-5xl or text-6xl on desktop) with bold/extrabold weight so it commands attention.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-services-section-services-tsx-visually-highlight-the-commercial-property-buying-and-sales-service-card-as-a-featured-hero-card-give-it-a-prominent-gold-gradient-border-or-a-gold-background-badge-labeled-featured-increase-its-card-size-or-apply-a-distinct-elevated-shadow-and-add-a-commercial-rent-sale-label-tag-in-bold-gold-text-ensure-it-visually-stands-out-from-all-other-service-cards-in-the-grid",
+      "title": "In the Services section (Services.tsx), visually highlight the 'Commercial Property Buying and Sales' service card as a featured/hero card. Give it a prominent gold gradient border or a gold background badge labeled 'Featured', increase its card size or apply a distinct elevated shadow, and add a 'Commercial Rent & Sale' label/tag in bold gold text. Ensure it visually stands out from all other service cards in the grid.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-hero-section-hero-tsx-update-the-tagline-trust-line-text-from-its-current-value-to-your-trusted-partner-for-commercial-and-residential-purchase-or-leasing-keep-the-deep-black-111111-color-and-playfair-display-serif-font-that-was-applied-in-the-previous-version-ensure-this-line-is-prominently-placed-beneath-the-business-name-and-above-the-cta-buttons",
+      "title": "In the Hero section (Hero.tsx), update the tagline / trust line text from its current value to: 'Your Trusted Partner for Commercial and Residential Purchase or Leasing'. Keep the deep black (#111111) color and Playfair Display serif font that was applied in the previous version. Ensure this line is prominently placed beneath the business name and above the CTA buttons.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-services-tsx-relocate-the-featured-commercial-property-buying-and-sales-commercial-rent-sale-highlighted-card-so-it-appears-as-a-standalone-prominent-section-immediately-after-the-hero-section-and-before-the-main-services-grid-it-should-be-rendered-outside-the-services-grid-positioned-between-the-hero-and-the-full-services-section-in-app-tsx",
+      "title": "In Services.tsx, relocate the featured 'Commercial Property Buying and Sales / Commercial Rent & Sale' highlighted card so it appears as a standalone prominent section immediately after the Hero section and before the main Services grid. It should be rendered outside the Services grid — positioned between the Hero and the full Services section in App.tsx.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-icon-on-the-standalone-commercial-rent-sale-featured-card-to-use-the-uploaded-elite-properties-logo-image-elite-logo-dim-300x300-png-referenced-from-frontend-public-assets-generated-elite-logo-dim-300x300-png-rendered-as-an-img-tag-replace-the-current-icon-emoji-with-this-logo-image-sized-appropriately-e-g-64x64-or-80x80px-within-the-card",
+      "title": "Update the icon on the standalone Commercial Rent & Sale featured card to use the uploaded Elite Properties logo image (elite-logo.dim_300x300.png) referenced from frontend/public/assets/generated/elite-logo.dim_300x300.png, rendered as an <img> tag. Replace the current icon/emoji with this logo image, sized appropriately (e.g., 64x64 or 80x80px) within the card.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-prominent-gold-gradient-border-to-the-standalone-commercial-rent-sale-featured-card-use-a-css-gradient-border-or-box-shadow-ring-in-champagne-gold-c9a84c-to-deep-gold-b8952a-tones-with-sufficient-border-width-e-g-2-3px-so-the-card-boundary-is-clearly-visible-and-premium-looking",
+      "title": "Add a prominent gold gradient border to the standalone Commercial Rent & Sale featured card. Use a CSS gradient border or box-shadow ring in champagne gold (#C9A84C) to deep gold (#B8952A) tones, with sufficient border width (e.g., 2–3px) so the card boundary is clearly visible and premium-looking.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-navbar-tsx-add-the-elite-properties-logo-image-referenced-from-frontend-public-assets-generated-elite-logo-dim-300x300-png-rendered-as-an-img-tag-immediately-before-the-company-name-text-elite-properties-real-estate-consultant-apply-the-same-gold-to-silver-gradient-ring-border-styling-box-shadow-or-css-gradient-ring-in-c9a84c-a8a8a8-tones-that-is-currently-used-on-the-logo-in-the-standalone-featuredcommercialcard-section-size-the-logo-appropriately-for-the-navbar-e-g-40x40-or-48x48px-and-ensure-it-aligns-vertically-with-the-company-name-text",
+      "title": "In Navbar.tsx, add the Elite Properties logo image (referenced from frontend/public/assets/generated/elite-logo.dim_300x300.png, rendered as an <img> tag) immediately before the company name text 'Elite Properties Real Estate Consultant'. Apply the same gold-to-silver gradient ring border styling (box-shadow or CSS gradient ring in #C9A84C / #A8A8A8 tones) that is currently used on the logo in the standalone FeaturedCommercialCard section. Size the logo appropriately for the navbar (e.g., 40x40 or 48x48px) and ensure it aligns vertically with the company name text.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -128,6 +201,48 @@
     {
       "id": "AR-6",
       "summary": "Change 'Pune's Most Trusted Real Estate Business' tagline text to black color and update to a professional font",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Replace logo with uploaded image, add innovative border styling to the logo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Change theme color to a more professional look (refine color scheme)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Make 'Elite Properties' name bigger/more prominent in navbar/hero",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Highlight 'Commercial Rent & Sale' as a featured/prominent service",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Update tagline/hero line to 'Your Trusted Partner for Commercial and Residential Purchase or Leasing'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Move the highlighted 'Commercial Rent & Sale' featured card to appear after the 1st page/hero section, change its icon to match the uploaded logo image, and add a border to it",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Use the same logo image (as used in the Commercial Rent & Sale featured card) in the navbar, placed before the company name",
       "reqIds": [],
       "status": "pending"
     }

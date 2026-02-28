@@ -11,7 +11,6 @@ import {
   ClipboardList,
   Search,
   Layers,
-  Building2,
   Tractor,
   UserCheck,
   Sofa,
@@ -19,6 +18,7 @@ import {
   CreditCard,
   Crown,
   Building,
+  Star,
 } from 'lucide-react';
 
 const services = [
@@ -34,7 +34,6 @@ const services = [
   { icon: ClipboardList, title: 'Property Valuation Reports', desc: 'Accurate and certified property valuation reports for informed decisions.' },
   { icon: Search, title: 'Appraisals', desc: 'Professional property appraisal services by certified experts.' },
   { icon: Layers, title: 'Building Lot Sales', desc: 'Prime building lots and plots available for residential and commercial development.' },
-  { icon: Building2, title: 'Commercial Property Buying & Sales', desc: 'Specialized services for commercial real estate transactions and investments.' },
   { icon: Tractor, title: 'Farm Sales', desc: 'Agricultural land and farm property sales with complete legal assistance.' },
   { icon: UserCheck, title: 'First-Time Home Buyer Services', desc: 'Dedicated support and guidance for first-time home buyers throughout the process.' },
   { icon: Sofa, title: 'Furnished Property Rentals & Sales', desc: 'Ready-to-move furnished properties for rent and sale across Pune.' },
@@ -44,17 +43,116 @@ const services = [
   { icon: Building, title: 'New Construction Sales & Leasing', desc: 'Latest new construction projects and pre-launch opportunities in Pune.' },
 ];
 
+// Standalone featured Commercial Rent & Sale card — rendered between Hero and Services grid
+export function FeaturedCommercialCard() {
+  return (
+    <section className="bg-background py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, oklch(0.68 0.14 72 / 0.07) 0%, transparent 70%)',
+        }}
+      />
+
+      <div className="max-w-3xl mx-auto relative">
+        {/* Gold gradient border wrapper using padding trick */}
+        <div
+          className="p-[3px] rounded-xl"
+          style={{
+            background: 'linear-gradient(135deg, oklch(0.80 0.13 78), oklch(0.68 0.14 72), oklch(0.54 0.13 65), oklch(0.80 0.13 78))',
+            boxShadow: '0 0 32px oklch(0.68 0.14 72 / 0.45), 0 4px 24px rgba(0,0,0,0.30)',
+          }}
+        >
+          <div
+            className="group relative rounded-[10px] overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, oklch(0.13 0.01 260), oklch(0.18 0.015 260))',
+            }}
+          >
+            {/* Gold shimmer top bar */}
+            <div
+              className="absolute top-0 left-0 right-0 h-1"
+              style={{ background: 'linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
+            />
+
+            <div className="p-7 sm:p-9 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+              {/* Elite Properties Logo as icon */}
+              <div
+                className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:scale-105 transition-transform duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, oklch(0.20 0.01 260), oklch(0.26 0.01 260))',
+                  boxShadow: '0 4px 16px oklch(0.68 0.14 72 / 0.35)',
+                  border: '1.5px solid oklch(0.68 0.14 72 / 0.5)',
+                }}
+              >
+                <img
+                  src="/assets/generated/elite-logo.dim_300x300.png"
+                  alt="Elite Properties"
+                  className="w-16 h-16 object-contain"
+                />
+              </div>
+
+              <div className="flex-1 text-center sm:text-left">
+                {/* Badges */}
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-3">
+                  <span
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
+                    style={{
+                      background: 'linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78))',
+                      color: 'oklch(0.13 0.01 260)',
+                    }}
+                  >
+                    <Star size={10} fill="currentColor" />
+                    Commercial Rent &amp; Sale
+                  </span>
+                  <span
+                    className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border"
+                    style={{
+                      borderColor: 'oklch(0.68 0.14 72)',
+                      color: 'oklch(0.80 0.13 78)',
+                      background: 'transparent',
+                    }}
+                  >
+                    Featured
+                  </span>
+                </div>
+
+                <h3 className="font-display font-bold text-white text-2xl sm:text-3xl mb-3 leading-snug">
+                  Commercial Property Buying &amp; Sales
+                </h3>
+                <p className="font-body text-charcoal-300 text-sm sm:text-base leading-relaxed mb-5">
+                  Specialized services for commercial real estate transactions, rentals, and investments across Pune. Our expert team ensures the best deals for offices, shops, warehouses, and more.
+                </p>
+
+                <a
+                  href="https://wa.me/919527942323"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 gold-gradient text-charcoal-900 font-body font-bold text-sm px-7 py-3 rounded-sm shadow-gold hover:opacity-90 transition-all duration-200 hover:scale-105"
+                >
+                  Enquire Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Services() {
   return (
     <section id="services" className="section-padding bg-background relative overflow-hidden">
       {/* Decorative background */}
       <div
         className="absolute top-0 left-0 right-0 h-1"
-        style={{ background: 'linear-gradient(90deg, oklch(0.72 0.18 75), oklch(0.88 0.16 85), oklch(0.58 0.16 68))' }}
+        style={{ background: 'linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
       />
       <div
         className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-5 blur-3xl"
-        style={{ background: 'oklch(0.72 0.18 75)' }}
+        style={{ background: 'oklch(0.68 0.14 72)' }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,10 +169,10 @@ export default function Services() {
             Our{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, oklch(0.72 0.18 75), oklch(0.58 0.16 68))',
+                background: 'linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.54 0.13 65))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+                backgroundClip: 'text',
               }}
             >
               Services
@@ -85,7 +183,7 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid — 19 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {services.map((service) => {
             const Icon = service.icon;
@@ -97,7 +195,7 @@ export default function Services() {
                 {/* Hover accent */}
                 <div
                   className="absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ background: 'linear-gradient(90deg, oklch(0.72 0.18 75), oklch(0.88 0.16 85))' }}
+                  style={{ background: 'linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78))' }}
                 />
 
                 {/* Icon */}

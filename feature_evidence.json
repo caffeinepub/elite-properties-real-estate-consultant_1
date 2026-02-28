@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-hero-section-change-the-tagline-text-pune-s-most-trusted-real-estate-business-to-deep-black-111111-or-similar-near-black-replace-its-current-font-with-a-professional-serif-font-e-g-playfair-display-already-available-in-the-project-to-maintain-a-luxury-real-estate-aesthetic-ensure-the-text-remains-clearly-legible-against-the-hero-background-at-all-times",
-      "featureTitle": "In the Hero section, change the tagline text 'Pune's Most Trusted Real Estate Business' to deep black (#111111 or similar near-black). Replace its current font with a professional serif font (e.g., Playfair Display, already available in the project) to maintain a luxury real estate aesthetic. Ensure the text remains clearly legible against the hero background at all times.",
+      "featureId": "feature-in-navbar-tsx-add-the-elite-properties-logo-image-referenced-from-frontend-public-assets-generated-elite-logo-dim-300x300-png-rendered-as-an-img-tag-immediately-before-the-company-name-text-elite-properties-real-estate-consultant-apply-the-same-gold-to-silver-gradient-ring-border-styling-box-shadow-or-css-gradient-ring-in-c9a84c-a8a8a8-tones-that-is-currently-used-on-the-logo-in-the-standalone-featuredcommercialcard-section-size-the-logo-appropriately-for-the-navbar-e-g-40x40-or-48x48px-and-ensure-it-aligns-vertically-with-the-company-name-text",
+      "featureTitle": "In Navbar.tsx, add the Elite Properties logo image (referenced from frontend/public/assets/generated/elite-logo.dim_300x300.png, rendered as an <img> tag) immediately before the company name text 'Elite Properties Real Estate Consultant'. Apply the same gold-to-silver gradient ring border styling (box-shadow or CSS gradient ring in #C9A84C / #A8A8A8 tones) that is currently used on the logo in the standalone FeaturedCommercialCard section. Size the logo appropriately for the navbar (e.g., 40x40 or 48x48px) and ensure it aligns vertically with the company name text.",
       "files": [
-        "frontend/src/components/Hero.tsx"
+        "frontend/src/components/Navbar.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-10"
+        "REQ-19"
       ],
       "confidence": "high"
     }

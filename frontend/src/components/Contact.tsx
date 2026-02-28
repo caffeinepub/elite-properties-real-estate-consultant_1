@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, MessageCircle, Mail } from 'lucide-react';
+import { MapPin, Clock, Phone, MessageCircle } from 'lucide-react';
 import { SiWhatsapp } from 'react-icons/si';
 
 export default function Contact() {
@@ -7,11 +7,11 @@ export default function Contact() {
       {/* Decorative top border */}
       <div
         className="absolute top-0 left-0 right-0 h-1"
-        style={{ background: 'linear-gradient(90deg, oklch(0.72 0.18 75), oklch(0.88 0.16 85), oklch(0.58 0.16 68))' }}
+        style={{ background: 'linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
       />
       <div
         className="absolute bottom-0 right-0 w-80 h-80 rounded-full opacity-5 blur-3xl"
-        style={{ background: 'oklch(0.72 0.18 75)' }}
+        style={{ background: 'oklch(0.68 0.14 72)' }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -28,7 +28,7 @@ export default function Contact() {
             Contact{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, oklch(0.88 0.16 85), oklch(0.72 0.18 75))',
+                background: 'linear-gradient(135deg, oklch(0.80 0.13 78), oklch(0.68 0.14 72))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -47,7 +47,10 @@ export default function Contact() {
           <div className="space-y-5">
             {/* Address */}
             <div className="flex gap-4 p-6 bg-charcoal-800/60 border border-charcoal-700 rounded-sm hover:border-gold-600/40 transition-colors group">
-              <div className="w-12 h-12 rounded-sm gold-gradient flex items-center justify-center flex-shrink-0 shadow-gold group-hover:scale-110 transition-transform">
+              <div
+                className="w-12 h-12 rounded-sm flex items-center justify-center flex-shrink-0 shadow-gold group-hover:scale-110 transition-transform"
+                style={{ background: 'linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
+              >
                 <MapPin size={20} className="text-charcoal-900" />
               </div>
               <div>
@@ -63,7 +66,10 @@ export default function Contact() {
 
             {/* Hours */}
             <div className="flex gap-4 p-6 bg-charcoal-800/60 border border-charcoal-700 rounded-sm hover:border-gold-600/40 transition-colors group">
-              <div className="w-12 h-12 rounded-sm gold-gradient flex items-center justify-center flex-shrink-0 shadow-gold group-hover:scale-110 transition-transform">
+              <div
+                className="w-12 h-12 rounded-sm flex items-center justify-center flex-shrink-0 shadow-gold group-hover:scale-110 transition-transform"
+                style={{ background: 'linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
+              >
                 <Clock size={20} className="text-charcoal-900" />
               </div>
               <div>
@@ -80,7 +86,10 @@ export default function Contact() {
 
             {/* Phone */}
             <div className="flex gap-4 p-6 bg-charcoal-800/60 border border-charcoal-700 rounded-sm hover:border-gold-600/40 transition-colors group">
-              <div className="w-12 h-12 rounded-sm gold-gradient flex items-center justify-center flex-shrink-0 shadow-gold group-hover:scale-110 transition-transform">
+              <div
+                className="w-12 h-12 rounded-sm flex items-center justify-center flex-shrink-0 shadow-gold group-hover:scale-110 transition-transform"
+                style={{ background: 'linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
+              >
                 <Phone size={20} className="text-charcoal-900" />
               </div>
               <div>
@@ -100,19 +109,25 @@ export default function Contact() {
           <div className="relative">
             <div
               className="rounded-sm p-8 text-center relative overflow-hidden"
-              style={{ background: 'linear-gradient(135deg, oklch(0.18 0.01 260), oklch(0.22 0.01 260))' }}
+              style={{ background: 'linear-gradient(135deg, oklch(0.16 0.01 260), oklch(0.20 0.01 260))' }}
             >
               {/* Gold border */}
               <div
-                className="absolute inset-0 rounded-sm"
-                style={{ padding: '1px', background: 'linear-gradient(135deg, oklch(0.72 0.18 75), oklch(0.88 0.16 85), oklch(0.58 0.16 68))' }}
-              >
-                <div className="w-full h-full rounded-sm bg-charcoal-900" />
-              </div>
+                className="absolute inset-0 rounded-sm pointer-events-none"
+                style={{
+                  border: '2px solid transparent',
+                  backgroundClip: 'padding-box',
+                  outline: '1.5px solid oklch(0.68 0.14 72)',
+                  outlineOffset: '-1.5px',
+                }}
+              />
 
               <div className="relative z-10">
                 {/* WhatsApp Icon */}
-                <div className="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6 shadow-gold-lg">
+                <div
+                  className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-gold-lg"
+                  style={{ background: 'linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
+                >
                   <SiWhatsapp size={36} className="text-charcoal-900" />
                 </div>
 

@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T08:53:45.563Z",
+  "generatedAt": "2026-02-28T12:51:39.403Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,14 +11,14 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-10",
-        "summary": "In the Hero section, change the tagline text 'Pune's Most Trusted Real Estate Business' to deep black (#111111 or similar near-black). Replace its current font with a professional serif font (e.g., Playfair Display, already available in the project) to maintain a luxury real estate aesthetic. Ensure the text remains clearly legible against the hero background at all times.",
+        "id": "REQ-19",
+        "summary": "In Navbar.tsx, add the Elite Properties logo image (referenced from frontend/public/assets/generated/elite-logo.dim_300x300.png, rendered as an <img> tag) immediately before the company name text 'Elite Properties Real Estate Consultant'. Apply the same gold-to-silver gradient ring border styling (box-shadow or CSS gradient ring in #C9A84C / #A8A8A8 tones) that is currently used on the logo in the standalone FeaturedCommercialCard section. Size the logo appropriately for the navbar (e.g., 40x40 or 48x48px) and ensure it aligns vertically with the company name text.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Hero.tsx"
+          "frontend/src/components/Navbar.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Hero.tsx"
+          "frontend/src/components/Navbar.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Navbar.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

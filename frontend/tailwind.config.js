@@ -66,29 +66,39 @@ export default {
           border: 'oklch(var(--sidebar-border))',
           ring: 'oklch(var(--sidebar-ring))'
         },
+        // Refined champagne gold palette — professional, not bright yellow
         gold: {
-          50:  'oklch(0.97 0.04 85)',
-          100: 'oklch(0.94 0.08 83)',
-          200: 'oklch(0.88 0.13 82)',
-          300: 'oklch(0.82 0.16 80)',
-          400: 'oklch(0.78 0.18 78)',
-          500: 'oklch(0.72 0.18 75)',
-          600: 'oklch(0.65 0.17 72)',
-          700: 'oklch(0.58 0.16 68)',
-          800: 'oklch(0.48 0.14 65)',
-          900: 'oklch(0.35 0.10 62)',
+          50:  'oklch(0.97 0.03 82)',
+          100: 'oklch(0.93 0.06 80)',
+          200: 'oklch(0.87 0.10 78)',
+          300: 'oklch(0.80 0.13 78)',
+          400: 'oklch(0.74 0.14 75)',
+          500: 'oklch(0.68 0.14 72)',
+          600: 'oklch(0.62 0.14 70)',
+          700: 'oklch(0.54 0.13 65)',
+          800: 'oklch(0.44 0.11 62)',
+          900: 'oklch(0.32 0.08 60)',
         },
+        // Deep charcoal palette
         charcoal: {
-          50:  'oklch(0.95 0.005 260)',
-          100: 'oklch(0.90 0.005 260)',
-          200: 'oklch(0.80 0.008 260)',
-          300: 'oklch(0.65 0.008 260)',
-          400: 'oklch(0.50 0.008 260)',
+          50:  'oklch(0.95 0.004 260)',
+          100: 'oklch(0.90 0.004 260)',
+          200: 'oklch(0.80 0.006 260)',
+          300: 'oklch(0.65 0.006 260)',
+          400: 'oklch(0.50 0.006 260)',
           500: 'oklch(0.40 0.008 260)',
-          600: 'oklch(0.35 0.01 260)',
-          700: 'oklch(0.28 0.01 260)',
-          800: 'oklch(0.22 0.01 260)',
-          900: 'oklch(0.15 0.01 260)',
+          600: 'oklch(0.32 0.01 260)',
+          700: 'oklch(0.26 0.01 260)',
+          800: 'oklch(0.20 0.01 260)',
+          900: 'oklch(0.13 0.01 260)',
+        },
+        // Platinum silver accent
+        platinum: {
+          100: 'oklch(0.96 0.004 220)',
+          200: 'oklch(0.90 0.006 220)',
+          300: 'oklch(0.82 0.008 220)',
+          400: 'oklch(0.74 0.008 220)',
+          500: 'oklch(0.66 0.008 220)',
         }
       },
       fontFamily: {
@@ -105,10 +115,11 @@ export default {
       },
       boxShadow: {
         xs: '0 1px 2px 0 rgba(0,0,0,0.05)',
-        gold: '0 4px 20px rgba(200, 150, 0, 0.25)',
-        'gold-lg': '0 8px 40px rgba(200, 150, 0, 0.35)',
+        gold: '0 4px 20px rgba(180, 130, 20, 0.28)',
+        'gold-lg': '0 8px 40px rgba(180, 130, 20, 0.38)',
         'card': '0 2px 16px rgba(0,0,0,0.08)',
         'card-hover': '0 8px 32px rgba(0,0,0,0.14)',
+        'logo-ring': '0 0 0 3px rgba(180,130,20,0.35), 0 0 20px rgba(180,130,20,0.20)',
       },
       keyframes: {
         'accordion-down': {

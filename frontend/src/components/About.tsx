@@ -46,11 +46,11 @@ export default function About() {
       {/* Background accent */}
       <div
         className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-5 blur-3xl"
-        style={{ background: 'oklch(0.72 0.18 75)' }}
+        style={{ background: 'oklch(0.68 0.14 72)' }}
       />
       <div
         className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-5 blur-3xl"
-        style={{ background: 'oklch(0.88 0.16 85)' }}
+        style={{ background: 'oklch(0.80 0.13 78)' }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -67,7 +67,7 @@ export default function About() {
             Why Choose{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, oklch(0.88 0.16 85), oklch(0.72 0.18 75))',
+                background: 'linear-gradient(135deg, oklch(0.80 0.13 78), oklch(0.68 0.14 72))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -92,7 +92,7 @@ export default function About() {
               <div
                 className="font-display font-bold text-3xl sm:text-4xl mb-1"
                 style={{
-                  background: 'linear-gradient(135deg, oklch(0.88 0.16 85), oklch(0.72 0.18 75))',
+                  background: 'linear-gradient(135deg, oklch(0.80 0.13 78), oklch(0.68 0.14 72))',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
@@ -114,7 +114,10 @@ export default function About() {
                 key={item.title}
                 className="group p-6 rounded-sm bg-charcoal-800/60 border border-charcoal-700 hover:border-gold-600/50 transition-all duration-300 hover:shadow-gold"
               >
-                <div className="w-12 h-12 rounded-sm gold-gradient flex items-center justify-center mb-4 shadow-gold group-hover:scale-110 transition-transform duration-300">
+                <div
+                  className="w-12 h-12 rounded-sm flex items-center justify-center mb-4 shadow-gold group-hover:scale-110 transition-transform duration-300"
+                  style={{ background: 'linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))' }}
+                >
                   <Icon size={22} className="text-charcoal-900" />
                 </div>
                 <h3 className="font-display font-semibold text-white text-lg mb-2">{item.title}</h3>
@@ -139,7 +142,7 @@ export default function About() {
               <p
                 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl"
                 style={{
-                  background: 'linear-gradient(135deg, oklch(0.88 0.16 85), oklch(0.72 0.18 75))',
+                  background: 'linear-gradient(135deg, oklch(0.80 0.13 78), oklch(0.68 0.14 72))',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
