@@ -139,7 +139,16 @@ export default function Footer() {
               href="https://wa.me/919527942323"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 gold-gradient text-charcoal-900 font-body font-bold text-sm px-5 py-3 rounded-sm shadow-gold hover:opacity-90 transition-all duration-200 hover:scale-105"
+              data-ocid="footer.whatsapp_button"
+              className="flex items-center justify-center gap-2 font-body font-bold text-sm px-5 py-3 rounded-sm transition-all duration-200 hover:scale-105"
+              style={{
+                background:
+                  "linear-gradient(135deg, #f5c842, #d4a017, #f5c842)",
+                color: "#1a1a1a",
+                boxShadow:
+                  "0 0 20px rgba(212,160,23,0.75), 0 4px 14px rgba(0,0,0,0.3)",
+                border: "1.5px solid #f5c842",
+              }}
             >
               <SiWhatsapp size={16} />
               WhatsApp Enquiry
