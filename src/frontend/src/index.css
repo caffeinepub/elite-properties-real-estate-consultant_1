@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Champagne Gold Brand Colors — refined, professional */
+    --gold-primary: 0.68 0.14 72;
+    --gold-light: 0.8 0.13 78;
+    --gold-dark: 0.54 0.13 65;
+    --gold-deep: 0.44 0.11 62;
+
+    /* Charcoal / Dark */
+    --charcoal: 0.16 0.01 260;
+    --charcoal-light: 0.23 0.01 260;
+    --charcoal-mid: 0.32 0.01 260;
+
+    /* Semantic tokens */
+    --background: 0.98 0.004 80;
+    --foreground: 0.13 0.01 260;
+    --card: 1 0 0;
+    --card-foreground: 0.13 0.01 260;
+    --popover: 1 0 0;
+    --popover-foreground: 0.13 0.01 260;
+    --primary: 0.68 0.14 72;
+    --primary-foreground: 0.1 0.01 260;
+    --secondary: 0.94 0.02 78;
+    --secondary-foreground: 0.16 0.01 260;
+    --muted: 0.93 0.01 78;
+    --muted-foreground: 0.48 0.01 260;
+    --accent: 0.8 0.13 78;
+    --accent-foreground: 0.1 0.01 260;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.02 78;
+    --input: 0.88 0.02 78;
+    --ring: 0.68 0.14 72;
+    --chart-1: 0.68 0.14 72;
+    --chart-2: 0.54 0.13 65;
+    --chart-3: 0.44 0.11 62;
+    --chart-4: 0.8 0.13 78;
+    --chart-5: 0.32 0.01 260;
+    --sidebar: 0.16 0.01 260;
+    --sidebar-foreground: 0.94 0.01 78;
+    --sidebar-primary: 0.68 0.14 72;
+    --sidebar-primary-foreground: 0.1 0.01 260;
+    --sidebar-accent: 0.23 0.01 260;
+    --sidebar-accent-foreground: 0.94 0.01 78;
+    --sidebar-border: 0.23 0.01 260;
+    --sidebar-ring: 0.68 0.14 72;
+  }
+
+  .dark {
+    --background: 0.13 0.01 260;
+    --foreground: 0.94 0.01 78;
+    --card: 0.18 0.01 260;
+    --card-foreground: 0.94 0.01 78;
+    --popover: 0.2 0.01 260;
+    --popover-foreground: 0.94 0.01 78;
+    --primary: 0.68 0.14 72;
+    --primary-foreground: 0.1 0.01 260;
+    --secondary: 0.23 0.01 260;
+    --secondary-foreground: 0.94 0.01 78;
+    --muted: 0.23 0.01 260;
+    --muted-foreground: 0.62 0.01 260;
+    --accent: 0.54 0.13 65;
+    --accent-foreground: 0.1 0.01 260;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.26 0.01 260;
+    --input: 0.26 0.01 260;
+    --ring: 0.68 0.14 72;
+    --sidebar: 0.16 0.01 260;
+    --sidebar-foreground: 0.94 0.01 78;
+    --sidebar-primary: 0.68 0.14 72;
+    --sidebar-primary-foreground: 0.1 0.01 260;
+    --sidebar-accent: 0.23 0.01 260;
+    --sidebar-accent-foreground: 0.94 0.01 78;
+    --sidebar-border: 0.23 0.01 260;
+    --sidebar-ring: 0.68 0.14 72;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+  .font-body {
+    font-family: "Inter", sans-serif;
+  }
+  .text-gold {
+    color: oklch(var(--gold-primary));
+  }
+  .bg-gold {
+    background-color: oklch(var(--gold-primary));
+  }
+  .bg-gold-light {
+    background-color: oklch(var(--gold-light));
+  }
+  .bg-charcoal {
+    background-color: oklch(var(--charcoal));
+  }
+  .border-gold {
+    border-color: oklch(var(--gold-primary));
+  }
+  /* Champagne gold gradient — refined, not bright yellow */
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.68 0.14 72),
+      oklch(0.8 0.13 78),
+      oklch(0.54 0.13 65)
+    );
+  }
+  .gold-text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.8 0.13 78),
+      oklch(0.68 0.14 72),
+      oklch(0.54 0.13 65)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  /* Innovative logo border ring */
+  .logo-border-ring {
+    background: linear-gradient(
+      135deg,
+      oklch(0.8 0.13 78),
+      oklch(0.68 0.14 72),
+      oklch(0.85 0.06 80),
+      oklch(0.54 0.13 65),
+      oklch(0.8 0.13 78)
+    );
+    padding: 3px;
+    border-radius: 14px;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.93 0.01 78);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.68 0.14 72);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.54 0.13 65);
+}
