@@ -1,7 +1,10 @@
 import {
   BarChart3,
+  Briefcase,
   Building,
   Building2,
+  Building as BuildingIcon,
+  Car,
   ClipboardList,
   CreditCard,
   Crown,
@@ -11,16 +14,20 @@ import {
   Home,
   Key,
   LandPlot,
+  Landmark,
   Layers,
   MapPin,
   Palmtree,
   Search,
   Settings,
+  ShoppingBag,
   Sofa,
   Star,
   Tractor,
+  TreePine,
   TrendingUp,
   UserCheck,
+  UtensilsCrossed,
 } from "lucide-react";
 
 const services = [
@@ -131,11 +138,23 @@ const services = [
   },
 ];
 
-// Standalone featured Commercial Rent & Sale card — rendered between Hero and Services grid
+const commercialTypes = [
+  { icon: UtensilsCrossed, label: "Bar & Restaurant" },
+  { icon: Briefcase, label: "Offices" },
+  { icon: ShoppingBag, label: "Shops" },
+  { icon: Car, label: "Showrooms" },
+];
+
+const residentialTypes = [
+  { icon: Landmark, label: "Independent Buildings" },
+  { icon: TreePine, label: "Bungalow Plots" },
+  { icon: BuildingIcon, label: "Luxurious Flats" },
+];
+
+// Standalone featured Commercial Rent & Sale card
 export function FeaturedCommercialCard() {
   return (
     <section className="bg-background py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Subtle background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -143,9 +162,7 @@ export function FeaturedCommercialCard() {
             "radial-gradient(ellipse 60% 60% at 50% 50%, oklch(0.68 0.14 72 / 0.07) 0%, transparent 70%)",
         }}
       />
-
       <div className="max-w-3xl mx-auto relative">
-        {/* Gold gradient border wrapper using padding trick */}
         <div
           className="p-[3px] rounded-xl"
           style={{
@@ -162,7 +179,6 @@ export function FeaturedCommercialCard() {
                 "linear-gradient(135deg, oklch(0.13 0.01 260), oklch(0.18 0.015 260))",
             }}
           >
-            {/* Gold shimmer top bar */}
             <div
               className="absolute top-0 left-0 right-0 h-1"
               style={{
@@ -170,9 +186,7 @@ export function FeaturedCommercialCard() {
                   "linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))",
               }}
             />
-
             <div className="p-7 sm:p-9 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
-              {/* Elite Properties Logo as icon */}
               <div
                 className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:scale-105 transition-transform duration-300"
                 style={{
@@ -188,9 +202,7 @@ export function FeaturedCommercialCard() {
                   className="w-16 h-16 object-contain"
                 />
               </div>
-
               <div className="flex-1 text-center sm:text-left">
-                {/* Badges */}
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-3">
                   <span
                     className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
@@ -214,21 +226,166 @@ export function FeaturedCommercialCard() {
                     Featured
                   </span>
                 </div>
-
                 <h3 className="font-display font-bold text-white text-2xl sm:text-3xl mb-3 leading-snug">
-                  Commercial Property Buying &amp; Sales
+                  Commercial Property Renting &amp; Selling
                 </h3>
                 <p className="font-body text-charcoal-300 text-sm sm:text-base leading-relaxed mb-5">
-                  Specialized services for commercial real estate transactions,
-                  rentals, and investments across Pune. Our expert team ensures
-                  the best deals for offices, shops, warehouses, and more.
+                  Specialized services for commercial real estate renting and
+                  selling across Pune. Our expert team ensures the best deals
+                  for all types of commercial spaces.
                 </p>
+
+                {/* Commercial property type chips */}
+                <div className="flex flex-wrap gap-2 mb-5 justify-center sm:justify-start">
+                  {commercialTypes.map(({ icon: Icon, label }) => (
+                    <span
+                      key={label}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold"
+                      style={{
+                        background: "oklch(0.20 0.01 260)",
+                        border: "1px solid oklch(0.68 0.14 72 / 0.4)",
+                        color: "oklch(0.80 0.13 78)",
+                      }}
+                    >
+                      <Icon size={13} />
+                      {label}
+                    </span>
+                  ))}
+                </div>
 
                 <a
                   href="https://wa.me/919527942323"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-ocid="featured.enquiry_button"
+                  data-ocid="featured.commercial_enquiry_button"
+                  className="inline-flex items-center gap-2 font-body font-bold text-sm px-7 py-3 rounded-sm transition-all duration-200 hover:scale-105"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #f5c842, #d4a017, #f5c842)",
+                    color: "#1a1a1a",
+                    boxShadow:
+                      "0 0 16px rgba(212,160,23,0.65), 0 2px 10px rgba(0,0,0,0.25)",
+                    border: "1.5px solid #f5c842",
+                  }}
+                >
+                  Enquire Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Standalone featured Residential Rent & Sale card
+export function FeaturedResidentialCard() {
+  return (
+    <section className="bg-background py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 60% at 50% 50%, oklch(0.68 0.14 72 / 0.07) 0%, transparent 70%)",
+        }}
+      />
+      <div className="max-w-3xl mx-auto relative">
+        <div
+          className="p-[3px] rounded-xl"
+          style={{
+            background:
+              "linear-gradient(135deg, oklch(0.80 0.13 78), oklch(0.68 0.14 72), oklch(0.54 0.13 65), oklch(0.80 0.13 78))",
+            boxShadow:
+              "0 0 32px oklch(0.68 0.14 72 / 0.45), 0 4px 24px rgba(0,0,0,0.30)",
+          }}
+        >
+          <div
+            className="group relative rounded-[10px] overflow-hidden"
+            style={{
+              background:
+                "linear-gradient(135deg, oklch(0.13 0.01 260), oklch(0.18 0.015 260))",
+            }}
+          >
+            <div
+              className="absolute top-0 left-0 right-0 h-1"
+              style={{
+                background:
+                  "linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78), oklch(0.54 0.13 65))",
+              }}
+            />
+            <div className="p-7 sm:p-9 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+              <div
+                className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:scale-105 transition-transform duration-300"
+                style={{
+                  background:
+                    "linear-gradient(135deg, oklch(0.20 0.01 260), oklch(0.26 0.01 260))",
+                  boxShadow: "0 4px 16px oklch(0.68 0.14 72 / 0.35)",
+                  border: "1.5px solid oklch(0.68 0.14 72 / 0.5)",
+                }}
+              >
+                <img
+                  src="/assets/generated/elite-logo.dim_300x300.png"
+                  alt="Elite Properties"
+                  className="w-16 h-16 object-contain"
+                />
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-3">
+                  <span
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78))",
+                      color: "oklch(0.13 0.01 260)",
+                    }}
+                  >
+                    <Star size={10} fill="currentColor" />
+                    Residential Rent &amp; Sale
+                  </span>
+                  <span
+                    className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border"
+                    style={{
+                      borderColor: "oklch(0.68 0.14 72)",
+                      color: "oklch(0.80 0.13 78)",
+                      background: "transparent",
+                    }}
+                  >
+                    Featured
+                  </span>
+                </div>
+                <h3 className="font-display font-bold text-white text-2xl sm:text-3xl mb-3 leading-snug">
+                  Residential Property Renting &amp; Selling
+                </h3>
+                <p className="font-body text-charcoal-300 text-sm sm:text-base leading-relaxed mb-5">
+                  Discover your perfect home with our residential renting and
+                  selling services across Pune. From cozy flats to grand
+                  bungalows — we find the right match for every family.
+                </p>
+
+                {/* Residential property type chips */}
+                <div className="flex flex-wrap gap-2 mb-5 justify-center sm:justify-start">
+                  {residentialTypes.map(({ icon: Icon, label }) => (
+                    <span
+                      key={label}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold"
+                      style={{
+                        background: "oklch(0.20 0.01 260)",
+                        border: "1px solid oklch(0.68 0.14 72 / 0.4)",
+                        color: "oklch(0.80 0.13 78)",
+                      }}
+                    >
+                      <Icon size={13} />
+                      {label}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href="https://wa.me/919527942323"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-ocid="featured.residential_enquiry_button"
                   className="inline-flex items-center gap-2 font-body font-bold text-sm px-7 py-3 rounded-sm transition-all duration-200 hover:scale-105"
                   style={{
                     background:
@@ -256,7 +413,6 @@ export default function Services() {
       id="services"
       className="section-padding bg-background relative overflow-hidden"
     >
-      {/* Decorative background */}
       <div
         className="absolute top-0 left-0 right-0 h-1"
         style={{
@@ -270,7 +426,6 @@ export default function Services() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="h-px w-12 bg-gold-500" />
@@ -299,7 +454,6 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {services.map((service) => {
             const Icon = service.icon;
@@ -308,7 +462,6 @@ export default function Services() {
                 key={service.title}
                 className="group relative bg-card border border-border rounded-sm p-5 hover:border-gold-400 hover:shadow-card-hover transition-all duration-300 cursor-default overflow-hidden"
               >
-                {/* Hover accent */}
                 <div
                   className="absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
@@ -316,13 +469,9 @@ export default function Services() {
                       "linear-gradient(90deg, oklch(0.68 0.14 72), oklch(0.80 0.13 78))",
                   }}
                 />
-
-                {/* Icon */}
                 <div className="w-11 h-11 rounded-sm gold-gradient flex items-center justify-center mb-4 shadow-gold group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <Icon size={20} className="text-charcoal-900" />
                 </div>
-
-                {/* Content */}
                 <h3 className="font-display font-semibold text-foreground text-base mb-2 leading-snug">
                   {service.title}
                 </h3>
@@ -334,7 +483,6 @@ export default function Services() {
           })}
         </div>
 
-        {/* Bottom CTA */}
         <div className="text-center mt-12">
           <p className="font-body text-muted-foreground text-sm mb-4">
             Not sure which service you need? Let our experts guide you.

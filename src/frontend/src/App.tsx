@@ -3,7 +3,10 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Services, { FeaturedCommercialCard } from "./components/Services";
+import Services, {
+  FeaturedCommercialCard,
+  FeaturedResidentialCard,
+} from "./components/Services";
 
 export default function App() {
   return (
@@ -12,6 +15,7 @@ export default function App() {
       <main>
         <Hero />
         <FeaturedCommercialCard />
+        <FeaturedResidentialCard />
         <About />
         <Services />
         <Contact />
